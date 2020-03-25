@@ -4,7 +4,7 @@ Plugin Name: Disable Customizer
 Plugin URI: https://github.com/artem-infamia/disable-customizer
 Description: Completely removes the WordPress Customizer from loading in your install.
 Version: 1.0.0
-Author: Andy Wilkerson, Jesse Petersen
+Author: Artem Zabolotniy (infamia)
 Author URI: https://github.com/artem-infamia/
 Text Domain: wp-crap
 Domain Path: /languages

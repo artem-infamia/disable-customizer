@@ -69,7 +69,7 @@ if (!class_exists('Disable_Customizer')) {
         public function override_load_customizer_action()
         {
             // If accessed directly
-            wp_die(__('The Customizer is currently disabled.', 'wp-crap'));
+            wp_die('The Customizer is currently disabled.');
         }
 
     } // End Class

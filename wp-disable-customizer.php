@@ -50,32 +50,6 @@ if (!class_exists('Disable_Customizer')) {
         }
 
         /**
-         * Load our language files
-         *
-         * @access public
-         * @return void
-         */
-        public function load_languages()
-        {
-            // Set textdomain string
-            $textdomain = 'wp-crap';
-
-            // The 'plugin_locale' filter is also used by default in load_plugin_textdomain()
-            $locale = apply_filters('plugin_locale', get_locale(), $textdomain);
-
-            // Set filter for WordPress languages directory
-            $wp_languages_dir = apply_filters('crap_wp_languages_dir', WP_LANG_DIR . '/wp-crap/' . $textdomain . '-' . $locale . '.mo');
-
-            // Translations: First, look in WordPress' "languages" folder
-            load_textdomain($textdomain, $wp_languages_dir);
-
-            // Translations: Next, look in plugin's "languages" folder (default)
-            $plugin_dir = basename(dirname(__FILE__));
-            $languages_dir = apply_filters('crap_languages_dir', $plugin_dir . '/languages');
-            load_plugin_textdomain($textdomain, FALSE, $languages_dir);
-        }
-
-        /**
          * Remove customize capability
          *
          * This needs to be in public so the admin bar link for 'customize' is hidden.
